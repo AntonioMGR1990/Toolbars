@@ -13,14 +13,14 @@ import com.example.usuario.toolbars.Fragments.FirstFragment;
 import com.example.usuario.toolbars.Fragments.SecondFragment;
 import com.example.usuario.toolbars.R;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-
+        setSupportActionBar(myToolbar);
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabs.addTab(tabs.newTab().setText("TELÉFONOS"));
@@ -45,7 +45,7 @@ public class MainActivity extends FragmentActivity {
                 }
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.simpleFrameLayout, fragment);
+                ft.replace(android.R.id.content, fragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 ft.commit();
             }
