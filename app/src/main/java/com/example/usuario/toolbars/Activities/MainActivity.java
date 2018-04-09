@@ -25,10 +25,10 @@ public class MainActivity extends FragmentActivity {
         tabs.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabs.addTab(tabs.newTab().setText("TELÉFONOS"));
         tabs.addTab(tabs.newTab().setText("TABLETS"));
-        tabs.addTab(tabs.newTab().setText("PORTÁTILES"));
+        /*tabs.addTab(tabs.newTab().setText("PORTÁTILES"));
         tabs.addTab(tabs.newTab().setIcon(android.R.drawable.ic_menu_help));
         tabs.addTab(tabs.newTab().setIcon(android.R.drawable.btn_star));
-        tabs.addTab(tabs.newTab().setIcon(android.R.drawable.ic_delete));
+        tabs.addTab(tabs.newTab().setIcon(android.R.drawable.ic_delete));*/
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
